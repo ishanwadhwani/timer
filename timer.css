@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    background: black;
+}
+.box{
+    width: 250px;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    /* background: linear-gradient(to bottom,red,yellow,orange); */
+    background: white;
+}
+.box h3{
+    position: relative;
+    letter-spacing: 1px;
+    margin: 35px 0px;
+    text-align: center;
+}
+.box h3::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2px;
+    background: black;
+}
+.time-circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+}
+.time-circle p{
+    font-size: 18px;
+    margin: 35px 0;
+}
+.sec-circle{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    height: 50%;
+    width: 2px;
+    transform-origin: bottom;
+    transition: 1s;
+}
+.sec-circle::after{
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    height: 10px;
+    width: 10px;
+    background: black;
+    border-radius: 35%;
+    border: 1px solid white;
+}
+.timer-controls{
+    margin-top: 150px;
+}
+span{
+    cursor: pointer;
+}
+.timer-controls .play-btn{
+    padding: 10px;
+    line-height: 10px;
+    border-radius: 40%;
+    border: none;
+    /* background: rgb(224, 224, 219); */
+    background: black;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px whitesmoke ;
+}
